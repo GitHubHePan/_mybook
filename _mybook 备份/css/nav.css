@@ -1,0 +1,416 @@
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	
+	#_nav {
+		height: 50px;
+		background-color: #ff6637;
+		position: relative;
+		top: 100px;
+	}
+	
+	#_ul1 {
+		position: absolute;
+		left: 365px;
+		z-index: 10;
+		background-color: #ff6637;
+		top: 0px;
+	}
+	
+	#_ul1 li {
+		float: left;
+		list-style-type: none;
+		height: 50px;
+		line-height: 50px;
+	}
+	
+	#_ul1 li:hover {
+		background-color: white;
+	}
+	
+	#_ul1 li:hover a {
+		color: #F85727;
+		font-weight: 900;
+	}
+	
+	#_ul1 li a {
+		text-decoration: none;
+		color: white;
+		padding-left: 45px;
+		padding-right: 45px;
+	}
+	
+	#_nav1 {
+		width: 1190px;
+		height: 50px;
+		background-color: #ff6637;
+		margin: 0 auto;
+		position: relative;
+		top: 50px;
+		z-index: 2;
+	}
+	
+	#_fenlei {
+		height: 50px;
+		width: 240px;
+		background-color: #f85727;
+	}
+	
+	#_fenlei p {
+		height: 50px;
+		color: white;
+		line-height: 50px;
+		width: 240px;
+		text-align: center;
+	}
+	
+	#_img1 {
+		position: absolute;
+		top: -55px;
+	}
+	
+	#_nav1 #_ipt {
+		height: 28px;
+		width: 540px;
+		position: absolute;
+		top: -50px;
+		left: 320px;
+		z-index: 11;
+		outline: none;
+	}
+	
+	#_nav1 #car {
+		height: 42px;
+		width: 152px;
+		background-color: #ff5400;
+		color: white;
+		border-radius: 10px;
+		position: absolute;
+		top: -60px;
+		left: 1000px;
+		outline: none;
+	}
+	
+	#l_fixed_div {
+		height: 100%;
+		width: 35px;
+		position: fixed;
+		top: 0;
+		right: 0;
+		background: #202020;
+		z-index: 100;
+	}
+	
+	#l_person {
+		width: 100%;
+		height: 100px;
+		margin-top: 40px;
+		border-bottom: 1px solid black;
+	}
+	
+	#l_shopingcar {
+		height: 148px;
+		width: 100%;
+		border-bottom: 1px solid black;
+		color: white;
+	}
+	
+	#l_shopingcar li {
+		list-style: none;
+	}
+	
+	#l_zi {
+		width: 16px;
+		margin-left: 9px;
+		margin-top: 25px;
+	}
+	
+	#l_num {
+		border-radius: 100%;
+		background: red;
+		height: 20px;
+		width: 20px;
+		text-align: center;
+		margin-left: 7px;
+	}
+	
+	#l_fixed_bottom {
+		margin-top: 122px;
+	}
+	
+	#l_fixed_bottom #_h1 #_a1 {
+		display: block;
+		height: 45px;
+		width: 35px;
+		background-color: rgba(255, 0, 0, 0.5);
+		position: absolute;
+		top: 410px;
+		display: none;
+	}
+	
+	#l_fixed_bottom #_h1:hover #_a1 {
+		display: block;
+	}
+	
+	#l_fixed_bottom #_h2 #_a2 {
+		display: block;
+		height: 45px;
+		width: 35px;
+		background-color: rgba(255, 0, 0, 0.5);
+		position: absolute;
+		top: 460px;
+		display: none;
+	}
+	
+	#l_fixed_bottom #_h2:hover #_a2 {
+		display: block;
+	}
+	
+	#l_fixed_bottom #_h3 #_a3 {
+		display: block;
+		height: 45px;
+		width: 35px;
+		background-color: rgba(255, 0, 0, 0.5);
+		position: absolute;
+		top: 510px;
+		display: none;
+	}
+	
+	#l_fixed_bottom #_h3:hover #_a3 {
+		display: block;
+	}
+	
+	#l_fixed_div #_tu1 #_tu11 {
+		display: block;
+		height: 45px;
+		width: 35px;
+		background-color: rgba(255, 0, 0, 0.5);
+		position: absolute;
+		top: 38px;
+		display: none;
+	}
+	
+	#l_fixed_div #_tu1:hover #_tu11 {
+		display: block;
+	}
+	
+	#l_fixed_div #_tu1:hover #ziliao {
+		display: block;
+	}
+	
+	#l_fixed_div #_tu2 #_tu21 {
+		display: block;
+		height: 45px;
+		width: 35px;
+		background-color: rgba(255, 0, 0, 0.5);
+		position: absolute;
+		top: 85px;
+		display: none;
+	}
+	
+	#l_fixed_div #_tu2:hover #_tu21 {
+		display: block;
+	}
+	
+	#_shopping {
+		display: block;
+		height: 148px;
+		width: 35px;
+		background-color: rgba(255, 0, 0, 0.5);
+		position: absolute;
+		top: 141px;
+		display: none;
+	}
+	
+	#l_shopingcar:hover #_shopping {
+		display: block;
+	}
+	
+	#l_person #_login {
+		height: 322px;
+		width: 343px;
+		position: absolute;
+		left: -343px;
+		top: 38px;
+		border: 1px solid #202020;
+		background-color: white;
+		display: none;
+	}
+	
+	#_login #_user {
+		margin-left: 51px;
+		margin-top: 44px;
+		height: 19px;
+		border-bottom: 2px solid #f54f4f;
+	}
+	
+	#_login #_userin1 {
+		height: 32px;
+		width: 237px;
+		margin-left: 51px;
+		margin-top: 10px;
+		background-color: #f7f7f7;
+	}
+	
+	#_login #_userin2 {
+		height: 32px;
+		width: 237px;
+		margin-left: 51px;
+		margin-top: 10px;
+		background-color: #f7f7f7;
+	}
+	
+	#_login #_btn {
+		display: block;
+		height: 44px;
+		width: 242px;
+		background-color: #F54F4F;
+		outline: none;
+		text-decoration: none;
+		color: white;
+		font-weight: 900;
+		line-height: 44px;
+		text-align: center;
+		margin-left: 51px;
+		margin-top: 50px;
+	}
+	
+	#_zhuce {
+		height: 550px;
+		width: 343px;
+		border: 1px solid black;
+		position: absolute;
+		left: -343px;
+		top: 38px;
+		background-color: white;
+		display: none;
+	}
+	
+	#_zhuce table {
+		border-collapse: collapse;
+		position: absolute;
+		left: -130px;
+	}
+	
+	#_zhuce td {
+		height: 50px;
+	}
+	
+	#_zhuce input[type=text] {
+		height: 30px;
+		width: 175px;
+	}
+	
+	#_zhuce input[type=password] {
+		height: 30px;
+		width: 175px;
+	}
+	
+	#_zhuce span {
+		margin-left: 10px;
+		color: red;
+	}
+	
+	#_zhuce input[type=submit] {
+		border: none;
+		width: 175px;
+		height: 54px;
+		outline: none;
+	}
+	
+	#_user1 {
+		margin-left: 51px;
+		margin-top: 44px;
+		height: 19px;
+		border-bottom: 2px solid #f54f4f;
+	}
+	
+	#_btn1 {
+		display: block;
+		height: 44px;
+		width: 242px;
+		background-color: #F54F4F;
+		outline: none;
+		text-decoration: none;
+		color: white;
+		font-weight: 900;
+		line-height: 44px;
+		text-align: center;
+		margin-left: 51px;
+		margin-top: 380px;
+	}
+	
+	#_message {
+		height: 100%;
+		width: 343px;
+		position: absolute;
+		left: -343px;
+		border: 1px solid black;
+		background-color: #3c3c3c;
+		z-index: 120;
+		display: none;
+	}
+	
+	#_message h2 {
+		color: white;
+		margin-left: 92px;
+		margin-top: 50px;
+	}
+	
+	#_message #u1 {
+		color: white;
+		width: 343px;
+		position: absolute;
+		top: 259px;
+		border-top: 1px solid #363636;
+		padding-top: 10px;
+	}
+	
+	#_message #us1 {
+		color: white;
+		width: 343px;
+		position: absolute;
+		top: 301px;
+		border-bottom: 1px solid #363636;
+		margin-top: 20px;
+		padding-bottom: 10px;
+	}
+	
+	#_message #u2 {
+		color: white;
+		width: 343px;
+		position: absolute;
+		top: 349px;
+		border-top: 1px solid #363636;
+		padding-top: 10px;
+	}
+	
+	#_message #us2 {
+		color: white;
+		width: 343px;
+		position: absolute;
+		top: 385px;
+		border-bottom: 1px solid #363636;
+		margin-top: 20px;
+		padding-bottom: 10px;
+	}
+	
+	#_message #u3 {
+		color: white;
+		width: 343px;
+		position: absolute;
+		top: 434px;
+		border-top: 1px solid #363636;
+		padding-top: 10px;
+	}
+	
+	#_message #us3 {
+		color: white;
+		width: 343px;
+		position: absolute;
+		top: 463px;
+		border-bottom: 1px solid #363636;
+		margin-top: 20px;
+		padding-bottom: 10px;
+	}

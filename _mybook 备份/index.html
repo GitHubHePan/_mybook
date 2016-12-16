@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head><br />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="css/nav.css" />
+	<script type="text/javascript">
+		$(function() {
+			$.ajax({
+				type: "get",
+				url: "main.html",
+				async: true,
+				success: function(data) {
+					$("#_box").html(data);
+					$(".dd3").click(function() {
+						$("#_box").html("");
+						$.ajax({
+							type: "get",
+							url: "shopping.html",
+							async: true,
+							success: function(data) {
+								$("#_box").html(data);
+								console.log(data);
+							}
+						});
+					});
+					$("#bangdan").click(function() {
+						$("#_box").html("");
+						$.ajax({
+							type: "get",
+							url: "list.html",
+							async: true,
+							success: function(data) {
+								$("#_box").html(data);
+								console.log(data);
+							}
+						});
+					})
+				}
+			});
+			$("#_shouye").click(function() {
+				$("#_box").html("");
+				$.ajax({
+					type: "get",
+					url: "main.html",
+					async: true,
+					success: function(data) {
+						$("#_box").html(data);
+						$(".dd3").click(function() {
+							$("#_box").html("");
+							$.ajax({
+								type: "get",
+								url: "shopping.html",
+								async: true,
+								success: function(data) {
+									$("#_box").html(data);
+								}
+							});
+						});
+						$("#bangdan").click(function() {
+							$("#_box").html("");
+							$.ajax({
+								type: "get",
+								url: "list.html",
+								async: true,
+								success: function(data) {
+									$("#_box").html(data);
+									console.log(data);
+								}
+							});
+						})
+					}
+				});
+			});
+		});
+	</script>
+	<style type="text/css">
+		#_box{
+			/*width: 1190px;*/
+			margin: 0 auto;
+			position: relative;
+		}
+	</style>
+
+	<body>
+		<div id="_nav"></div>
+		<div id="_nav1">
+			<div id="_fenlei">
+				<p>全部商品列表</p>
+			</div>
+			<ul id="_ul1">
+				<li>
+					<a href="#" id="_shouye">首页</a>
+				</li>
+				<li>
+					<a href="#">读者热推</a>
+				</li>
+				<li>
+					<a href="#">新品上市</a>
+				</li>
+				<li>
+					<a href="#">热卖推荐</a>
+				</li>
+			</ul>
+			<img src="img/a1.png" id="_img1" />
+			<input type="text" id="_ipt" style="border-radius:20px;" placeholder=" 请输入搜索的关键字" />
+			<button id='car'>我的购物车</button>
+		</div>
+
+		<div id="l_fixed_div">
+			<div id="_message">
+				<h2>欢迎— <span id = "welcome" style="color: white;"></span></h2>
+				<div style="border: 1px solid gold;height: 80px;width: 80px;position: relative;top: 75px;left: 135px;border-radius:100% ;overflow: hidden;">
+					<img src="img/touxiang.png" />
+				</div>
+				<p id="u1">用户名：</p>
+				<p id="us1"></p>
+
+				<p id="u2">个人电话:</p>
+				<p id="us2">13089079286</p>
+
+				<p id="u3">个人邮箱:</p>
+				<p id="us3">1083142763@qq.com</p>
+
+			</div>
+			<div id="l_person">
+				<div id="_tu1"><img src="img/fixed-1.png" />
+					<a href="#" id="_tu11"></a>
+					<div id="_login">
+						<p id="_user">账号密码登录</p>
+						<input type="text" placeholder="账号" id="_userin1" /><img src="img/aa1.png" alt="" style="position: absolute;left: 265px;top: 77px;" />
+						<input type="password" placeholder="密码" id="_userin2" /><img src="img/aa2.png" alt="" style="position: absolute;left: 265px;top: 123px;" />
+						<br />
+						<p style="position: absolute;left: 141px;top: 172px;color: red;" id="_p1"></p>
+						<span id="_btn">登录</span>
+						<br />
+						<a href="#" style="text-decoration: none;float:right;color: gray" id="zhuce">免费注册>></a>
+					</div>
+
+					<div id="_zhuce">
+						<p id="_user1">用户注册</p>
+
+						<!--<form action="1-index.html">-->
+						<table border="0" cellspacing="0" cellpadding="0" width="1000" id="table">
+							<tr>
+								<td></td>
+							</tr>
+
+							<td align="right">用户名:</td>
+							<td>&nbsp;
+								<input type="text" id="user">
+								<br />
+								<span id="one" style="font-size:10px ;"></span>
+							</td>
+							</tr>
+							<tr>
+								<td align="right">设置密码:</td>
+								<td>&nbsp;
+									<input type="password" id="pwd">
+									<br />
+									<span id="two" style="font-size:10px ;"></span>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">确认密码:</td>
+								<td>&nbsp;
+									<input type="password" id="pwd1">
+									<br />
+									<span id="three" style="font-size:10px ;"></span>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">常用手机:</td>
+								<td>&nbsp;
+									<input type="text" id="iphone">
+									<br />
+									<span id="four" style="font-size:10px ;"></span>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">常用邮箱:</td>
+								<td>&nbsp;
+									<input type="text" size="10" id="patern"><span id="suiJi" style="background-color:#0CF;font-size: 20px;"></span>
+									<br />
+									<span id="five" style="font-size:10px ;"></span>
+								</td>
+							</tr>
+						</table>
+						<p style="position: absolute;top: 400px;left: 160px;color: red;" id="_zcs"></p>
+						<span id="_btn1" style="margin-left: 70px;color: white;">注册</span>
+					</div>
+
+				</div>
+				<div id="_tu2"><img src="img/fixed-2.png" />
+					<a href="" id="_tu21"></a>
+				</div>
+			</div>
+
+			<div id="l_shopingcar">
+				<img src="img/fixed-3.png" />
+				<div id="l_zi">
+					<a href="" style="color: white;text-decoration: none;">购物车</a>
+				</div>
+				<div id="l_num">
+					0
+				</div>
+				<a href="" id="_shopping"></a>
+			</div>
+			<div id="l_fixed_bottom">
+				<div id="_h1"><img src="img/fixed-4.png" />
+					<a href="" id="_a1"></a>
+				</div>
+				<div id="_h2"><img src="img/fixed-5.png" />
+					<a href="" id="_a2"></a>
+				</div>
+				<div id="_h3"><img src="img/fixed-6.png" />
+					<a href="" id="_a3"></a>
+				</div>
+			</div>
+		</div>
+		<div id="_box"></div>
+	</body>
+	<script type="text/javascript" src="js/denglu.js"></script>
+	<script src="js/yanzheng.js"></script>
+
+</html>

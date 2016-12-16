@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#myCarousel").carousel({
+					interval:2000
+				});
+			});
+		</script>
+		<style type="text/css">
+			*{margin:0;padding: 0;}
+			#main{width:1190px;height:1000px;margin:0 auto;margin-top:50px;}
+			#menu{width:240px;height:495px;background: #f8f8f8;float:left;}
+			#menu li{list-style: none;border-bottom: 1px solid #f1f1f1;height:61px;line-height: 61px;text-align: center;font-family: "微软雅黑";}
+			#menu li:hover{background: white;border:1px solid red;color:red;}
+			#myCarousel ol{position: absolute;top:450px;left:735px;z-index: 100;}
+			#innerbanner{float:left;width:928px;height:480px;margin-top:17px;margin-left:22px;}
+			#zhanshi{height:227px;}
+			#zhanshi table{margin-top:22px;float: left;margin-bottom:80px;}
+			#xinpin{clear:left;height:48px;width:283px;margin:0 auto;text-align: center;line-height: 48px;
+					background: #333333;font-weight: 900;color:white;font-size:24px;}
+			#detail hr{background: #333333;border:0;height:3px;}
+			#new dl{float:left;width:295px;margin-top:100px;border:1px solid #eeeeee;}
+			#new dd{text-align: center;}
+			#new .dd1{color:#666666;}
+			#new a{display: block;width:88px;height:30px;background: #ff6637;line-height: 30px;text-decoration: none;
+					color:white;font-weight: 800;margin-left:101px;}
+			#jingxuan{margin-top:80px;float:left;}
+			#tuijian{clear:left;height:48px;width:283px;margin:0 auto;text-align: center;line-height: 48px;
+					background: #333333;font-weight: 900;color:white;font-size:24px;}
+			#jingxuan hr{background: #333333;border:0;height:3px;}
+			#recommended dl{float:left;width:295px;margin-top:100px;border:1px solid #eeeeee;}
+			#recommended dd{text-align: center;}
+			#recommended .dd1{color:#666666;}
+			#recommended a{display: block;width:88px;height:30px;background: #ff6637;line-height: 30px;text-decoration: none;
+					color:white;font-weight: 800;margin-left:101px;}
+			#dujia{margin-top:80px;float:left;margin-bottom:130px;}
+			#tegong{clear:left;height:48px;width:283px;margin:0 auto;text-align: center;line-height: 48px;
+					background: #333333;font-weight: 900;color:white;font-size:24px;}
+			#dujia hr{background: #333333;border:0;height:3px;}
+			#exclusive dl{float:left;width:295px;margin-top:100px;border:1px solid #eeeeee;}
+			#exclusive dd{text-align: center;}
+			#exclusive .dd1{color:#666666;}
+			#exclusive a{display: block;width:88px;height:30px;background: #ff6637;line-height: 30px;text-decoration: none;
+					color:white;font-weight: 800;margin-left:101px;}
+					
+			#footer{width:100%;background: #f5f5f5;height:330px;float:left;}
+			#innerfooter{width:100%;background: #2b2b2b;}
+			#footer table{width:1190px;margin:0 auto;text-align: center;color:#666666;margin-top:97px;}
+			#footer table th{text-align: center;}
+			#footer table td{width:20%;line-height: 30px;}
+			#footer_top{height:56px;width:1190px;background: #2b2b2b;margin-top:87px;margin:0 auto;}
+			#footer_top ul{float:left;}
+			#footer_top li{list-style: none;float:left;line-height: 56px;padding-left: 100px;}
+			#footer_top li a{color: white;text-decoration: none;font-weight: 900;}
+			#tele{float:left;margin-left: 270px;color: #ff6537;font-weight: bolder;font-size: larger;}
+			#tele img{vertical-align: middle;}
+			#banquan{height:100px;line-height: 100px; color:#4d4d4d;}
+			#paixu{width:1190px;background: cyan;height:100px;float:left;}
+			#bangdan{height:50px;width:1190px;float:left;text-align: right;}
+			#banquan span{position: relative;top: -36px;}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		<div id="main">
+			<div id="myCarousel"  class="carousel slide">
+				<div id="menu">
+					<ul>
+						<li>新品上架</li>
+						<li>图书</li>
+						<li>电子书</li>
+						<li>童书</li>
+						<li>文艺</li>
+						<li>经管</li>
+						<li>励志</li>
+						<li>人文社科</li>
+					</ul>
+				</div>
+				<!-- 轮播（Carousel）指标 -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+					<li data-target="#myCarousel" data-slide-to="3"></li>
+					<li data-target="#myCarousel" data-slide-to="4"></li>
+				</ol>   
+				<div id="innerbanner" class="carousel-inner">
+					<div class="item active">
+						<img src="img/book2.jpg" alt="First slide">
+					</div>
+					<div class="item">
+						<img src="img/book3.jpg" alt="Second slide">
+					</div>
+					<div class="item">
+						<img src="img/book4.jpg" alt="Third slide">
+					</div>
+					<div class="item">
+						<img src="img/book5.jpg" alt="Third slide">
+					</div>
+					<div class="item">
+						<img src="img/book6.jpg" alt="Third slide">
+					</div>
+				</div>
+			</div>
+			<div id="zhanshi">
+				<table>
+					<tr>
+						<td><img src="img/buybook10.jpg" style="width:295px;height:205px;"/></td>
+						<td><img src="img/book1.jpg" style="width:295px;height:205px;"/></td>
+						<td><img src="img/buybook8.jpg" style="width:295px;height:205px;"/></td>
+						<td><img src="img/buybook6.jpg" style="width:295px;height:205px;"/></td>
+					</tr>
+				</table>
+				<div id="bangdan">
+					<a href="#" id = "bangdan">查看榜单》</a>
+				</div>
+			</div>
+			<div id="detail">
+				<div id="xinpin">
+					新品展示
+				</div>
+				<hr />
+				<div id="new">
+					<dl>
+						<dt><img src="img/buybook.jpg" style="width:289px;height:410px;"/></dt>
+						<dd class="dd1">因为孤独的缘故</dd>
+						<dd class="dd2">￥33.00</dd>
+						<dd class="dd3"><a href="#">购买</a></dd>
+					</dl>
+					<dl>
+						<dt><img src="img/buybook3.jpg" style="width:289px;height:410px;"/></dt>
+						<dd class="dd1">特别会说话</dd>
+						<dd class="dd2">￥23.50</dd>
+						<dd class="dd3"><a href="#">购买</a></dd>
+					</dl>
+					<dl>
+						<dt><img src="img/buybook2.jpg" style="width:289px;height:410px;"/></dt>
+						<dd class="dd1">大圆满前行</dd>
+						<dd class="dd2">￥52.30</dd>
+						<dd class="dd3"><a href="#">购买</a></dd>
+					</dl>
+					<dl>
+						<dt><img src="img/buybook4.jpg" style="width:289px;height:410px;"/></dt>
+						<dd class="dd1">男孩的冒险书</dd>
+						<dd class="dd2">￥116.80</dd>
+						<dd class="dd3"><a href="#">购买</a></dd>
+					</dl>
+				</div>
+			</div>
+			<div id="jingxuan">
+				<div id="tuijian">
+					为您推荐
+				</div>
+				<hr />
+				<div id="recommended">
+					<dl>
+						<dt><img src="img/buybook5.jpg" style="width:289px;height:410px;"/></dt>
+						<dd class="dd1">愿你的青春不负梦想</dd>
+						<dd class="dd2">￥13.99</dd>
+						<dd class="dd3"><a href="">购买</a></dd>
+					</dl>
+					<dl>
+						<dt><img src="img/buybook6.jpg" style="width:289px;height:410px;"/></dt>
+						<dd class="dd1">光芒纪·颖耀</dd>
+						<dd class="dd2">￥22.80</dd>
+						<dd class="dd3"><a href="">购买</a></dd>
+					</dl>
+					<dl>
+						<dt><img src="img/buybook7.jpg" style="width:289px;height:410px;"/></dt>
+						<dd class="dd1">走进奇妙的几何世界</dd>
+						<dd class="dd2">￥65.70</dd>
+						<dd class="dd3"><a href="">购买</a></dd>
+					</dl>
+					<dl>
+						<dt><img src="img/buybook8.jpg" style="width:289px;height:410px;"/></dt>
+						<dd class="dd1">假面饭店</dd>
+						<dd class="dd2">￥28.70</dd>
+						<dd class="dd3"><a href="">购买</a></dd>
+					</dl>
+				</div>
+			</div>
+			<div id="dujia">
+				<div id="tegong">
+					独家特供
+				</div>
+				<hr />
+				<div id="exclusive">
+					<dl>
+						<dt><img src="img/buybook9.jpg" style="width:289px;height:410px;"/></dt>
+						<dd class="dd1">团队伙伴一起解决问题</dd>
+						<dd class="dd2">￥70.80</dd>
+						<dd class="dd3"><a href="">购买</a></dd>
+					</dl>
+					<dl>
+						<dt><img src="img/buybook10.jpg" style="width:289px;height:410px;"/></dt>
+						<dd class="dd1">我们，我们的历史</dd>
+						<dd class="dd2">￥64.00</dd>
+						<dd class="dd3"><a href="">购买</a></dd>
+					</dl>
+					<dl>
+						<dt><img src="img/buybook11.jpg" style="width:289px;height:410px;"/></dt>
+						<dd class="dd1">和朋友们一起想办法</dd>
+						<dd class="dd2">￥57.20</dd>
+						<dd class="dd3"><a href="">购买</a></dd>
+					</dl>
+					<dl>
+						<dt><img src="img/buybook12.jpg" style="width:289px;height:410px;"/></dt>
+						<dd class="dd1">小屁孩日记</dd>
+						<dd class="dd2">￥240.50</dd>
+						<dd class="dd3"><a href="">购买</a></dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<div id="footer">			
+			<table>
+				<tr>
+					<th>服务保障</th>
+					<th>支付方式</th>
+					<th>商家服务</th>
+					<th>物流配送</th>
+					<th>官方微信</th>
+				</tr>
+				<tr>
+					<td>正品保证</td>
+					<td>公司转账</td>
+					<td>商家入驻</td>
+					<td>免运费</td>
+					<td rowspan="4"><img src="img/qrCode.gif"/></td>
+				</tr>
+				<tr>
+					<td>7天无理由退换</td>
+					<td>货到付款</td>
+					<td>培训中心</td>
+					<td>海外配送</td>
+				</tr>
+				<tr>
+					<td>退货返运费</td>
+					<td>在线支付</td>
+					<td>广告服务</td>
+					<td>EMS</td>
+				</tr>
+				<tr>
+					<td>7×15小时客户服务</td>
+					<td>分期付款</td>
+					<td>服务市场</td>
+					<td>211限时达</td>
+				</tr>
+			</table>
+			<div id="innerfooter">
+				<div id="footer_top">
+					<ul>
+						<li><a href="">首页</a></li>
+						<li><a href="">读者热推</a></li>
+						<li><a href="">新品上市</a></li>
+						<li><a href="">热卖推荐</a></li>
+					</ul>
+					<div id="tele">
+						<img src="img/tele-1.png"/>
+						400-00000
+					</div>
+				</div>
+			</div>
+			<!--<div id="banquan">-->
+				<span>@2016 little boys 版权所有</span>
+			<!--</div>-->
+		</div>
+	</body>
+</html>

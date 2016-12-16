@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>-->
+		<script type="text/javascript">
+			$(function() {
+				$("#loginBtn").click(function() {
+					var usernameVal = $("#username").val();
+					var passwordVal = $("#password").val();
+					$.ajax({
+						type: "post",
+						url: "http://10.2.153.113:8081/loginUser",
+						data: {
+							"username": usernameVal,
+							"password": passwordVal
+						},
+						success: function(data) {
+							sessionStorage.setItem("username", usernameVal)
+							if(!data) {
+								alert("mimacuowu");
+							} else {
+								$("#a1").text("登陆成功");
+								var s = sessionStorage.getItem("username");
+								$("#a3").text(s);
+								window.location.href = "被跳页面.html";
+							}
+						}
+					});
+				});
+			});
+			$(function() {
+				$("#registryBtn").click(function() {
+					var usernameVal = $("#addusername").val();
+					var passwordVal = $("#addpassword").val();
+					var phoneNmuVal = $("#phoneNum").val();
+					var emailVal = $("#email").val();
+					$.ajax({
+						type: "post",
+						url: "http://10.2.153.113:8081/registryin",
+						data: {
+							"username": usernameVal,
+							"password": passwordVal,
+							"phoneNum": phoneNmuVal,
+							"email": emailVal
+						},
+						success: function(data) {
+							if(!data) {
+								alert("注册失败");
+							} else {
+								$("#a2").text("注册成功");
+							}
+						}
+					});
+				});
+			});
+			$(function() {
+				$.ajax({
+					type: "get",
+					url: "http://10.2.153.113:8081/countAll",
+					async: true,
+					success: function(data) {
+						for(i in data) {
+							console.log(data[i]);
+						}
+
+					}
+				});
+
+				$("span").click(function(e) {
+					var pageVal = $(this).text();
+					alert(pageVal);
+					uri = "http://10.2.153.113:8081/c" + pageVal;
+					$.ajax({
+						type: "get",
+						url: uri,
+						async: true,
+						success: function(data) {
+							for(i in data) {
+								console.log(data[i].id + "...." + data[i].b_price + "...." + data[i].b_sales + "...." + data[i].b_name);
+							}
+						}
+					});
+				});
+			});
+			$(function() {
+				$("pq").click(function(e) {
+					var pageVal = $(this).text();
+					var uri = "http://10.2.153.113:8081/a" + pageVal;
+					$.ajax({
+						type: "get",
+						url: uri,
+						async: true,
+						success: function(data) {
+							for(i in data) {
+								console.log(data[i].id + "...." + data[i].b_price + "...." + data[i].b_sales + "...." + data[i].b_name +"...."+data[i].b_src+"...."+data[i].b_buzz);
+								$("#div1").append("<img src='"+data[i].b_src+"'>")
+								
+							}
+						}
+					});
+				})
+
+			})
+			$(function() {
+				$("sb").click(function(e) {
+					var pageVal = $(this).text();
+					var uri = "http://10.2.153.113:8081/b" + pageVal;
+					$.ajax({
+						type: "get",
+						url: uri,
+						async: true,
+						success: function(data) {
+							for(i in data) {
+								console.log(data[i].id + "...." + data[i].b_price + "...." + data[i].b_sales + "...." + data[i].b_name);
+							}
+						}
+					});
+				})
+			})
+			$(function() {
+				$("sq").click(function(e) {
+					var pageVal = $(this).text();
+					var uri = "http://10.2.153.113:8081/d" + pageVal;
+					$.ajax({
+						type: "get",
+						url: uri,
+						async: true,
+						success: function(data) {
+							for(i in data) {
+								console.log(data[i].id + "...." + data[i].b_price + "...." + data[i].b_sales + "...." + data[i].b_name+"...."+data[i].b_buzz);
+							}
+						}
+					});
+				})
+			})
+		</script>
+		<style>
+			div {
+				height: 300px;
+				width: 500px;
+				border: 1px solid red;
+			}
+			
+			span {
+				height: 20px;
+				width: 20px;
+				border: 1px solid blue;
+				display: inline-block;
+				border-radius: 10px;
+				text-align: center;
+			}
+			
+			span:first-of-type {
+				margin-left: 200px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		账号：
+		<input type="text" name="username" id="username" value="tiger" />
+		<br /> 密码：
+		<input type="password" name="password" id="password" value="123" />
+		<br />
+		<button id="loginBtn">denglu </button>
+		<a href="" id="a1"></a>
+		<a href="" id="a3"></a>
+
+		<hr /> 用户名：
+		<input type="text" name="addusername" id="addusername" value="hello" />
+		<br /> 密&nbsp;码：
+		<input type="password" name="addpassword" id="addpassword" value="123" />
+		<br />电话号：
+		<input type="text" name="phoneNum" id="phoneNum" value="13322223333" />
+		<br />email:
+		<input type="text" name="email" id="email" value="13322223333" />
+		<br />
+		<button id="registryBtn">注册</button>
+		<a href="" id="a2"></a>
+
+		<hr />
+		<div id="div1"></div>
+		默认<br />
+		<span id="page1">1</span>
+		<span id="page2">2</span>
+		<span id="page3">3</span>
+		<span id="page4">4</span>
+		<hr />
+		销量<br />
+		<pq>1</pq>
+		<pq>2</pq>
+		<pq>3</pq>
+		<pq>4</pq>
+		<pq>5</pq>
+		<hr />
+		价格<br />
+		<sb>1</sb>
+		<sb>2</sb>
+		<sb>3</sb>
+		<sb>4</sb>
+		<sb>5</sb>
+		<hr />
+		人气<br />
+		
+		<sq>1</sq>
+		<sq>2</sq>
+		<sq>3</sq>
+		<sq>4</sq>
+		<sq>5</sq>
+		<button id="btn4">获取</button>
+		<img src="http://10.2.153.113:8081/img/quanjie.jpg" alt="" style="height: 50px;width: 50px; ">
+	</body>
+
+</html>
